@@ -8,7 +8,6 @@ document.addEventListener('deviceready', function() {
 
     studentInput();
 
-
 });
 
 function studentInput(){
@@ -38,8 +37,6 @@ function addService(studentNumber){
             }
         ]
     };
-    console.log(params);
-
     bluetoothle.addService(serviceSuccess, serviceError, params);
 }
 
@@ -48,10 +45,8 @@ function startAdvertising(studentNumber){
     let params = {
         "services":[studentNumber],
         "service":studentNumber,
-        "name":"Craig Blakeney",
-        timeout: 20000,
-        powerLevel: "high",
-        includeDeviceName: true,
+        "name":"",
+        powerLevel: "high"
     };
 
     console.log(params);
